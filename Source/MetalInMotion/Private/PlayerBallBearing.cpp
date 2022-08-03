@@ -44,7 +44,7 @@ APlayerBallBearing::APlayerBallBearing()
 
 
 /**
-Adds the Axis and Action Mappings you would usually add through the project setting in unreal engine
+Establish the default pawn input bindings for a player ball bearing.
 *********************************************************************************/
 
 static void InitializeDefaultPawnInputBindings()
@@ -118,6 +118,6 @@ Control the movement of the ball bearing, called every frame.
 void APlayerBallBearing::Tick(float deltaSeconds)
 {
 	Super::Tick(deltaSeconds);
- 
+
 	BallMesh->AddForce(FVector(InputLongitude, InputLatitude, 0.0f) * ControllerForce * BallMesh->GetMass());
 }
