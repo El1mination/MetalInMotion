@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
+#include "Components/StaticMeshComponent.h"
 #include "BallBearing.generated.h"
 
 UCLASS()
@@ -14,6 +15,9 @@ class ABallBearing : public APawn
 public:
 	// Sets default values for this pawn's properties
 	ABallBearing();
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadonly, Category = "BallBearing")
+		UStaticMeshComponent* BallMesh;
 
 protected:
 	// Called when the game starts or when spawned
